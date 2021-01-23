@@ -25,3 +25,14 @@
   justify-content: center;
   font-size: 3rem;
 }
+
+.container{
+  width: 30px;
+  height: 10px;
+  
+}
+
+/* .container{
+  width: auto;
+  height: 20px;
+} */
