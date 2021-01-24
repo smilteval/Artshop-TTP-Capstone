@@ -6,6 +6,8 @@ import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 
+import logo from '../../assets/ArtShop Logo Small.png';
+
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
@@ -17,7 +19,16 @@ function Navbar() {
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
             <FaIcons.FaBars onClick={showSidebar} />
+            {/* this is the hamburger menu */}
           </Link>
+            <div className= "logo">
+              {/* This is the logo on the navbar */}
+                <Link to="/">
+                  <img src={logo} alt="Logo"/> 
+                  {/* Using the link, when you click on the logo you will be redirected to home */}
+                </Link>
+                
+            </div>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>
