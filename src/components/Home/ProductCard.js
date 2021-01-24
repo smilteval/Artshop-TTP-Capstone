@@ -1,20 +1,16 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
+import {
+  makeStyles,
+  Card,
+  CardHeader,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Avatar,
+  IconButton,
+  Typography,
+} from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,51 +19,36 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
+    paddingTop: "56.25%",
   },
   avatar: {
-    backgroundColor: red[500],
+    backgroundColor: "#04364C",
   },
 }));
 
-export default function ProductCard() {
-  const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+export default function ProductCard(props) {
+  let { title, description, imageUrl, createdAt } = props;
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  const classes = useStyles();
+
+  const formatImageUrl = (url) => `http://localhost:1337${url}`;
 
   return (
-    <div className="product-card" style={{margin: "10px"}}>
+    <div className="product-card" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
-          avatar={<Avatar className={classes.avatar}>S</Avatar>}
-          title="Username"
-          subheader="September 14, 2016"
+          avatar={<Avatar className={classes.avatar}> A </Avatar>}
+          title={title}
+          subheader={createdAt}
         />
-        <CardMedia
-          className={classes.media}
-          image="https://adworks.ink/wp-content/uploads/2019/01/image_coming_soon.png"
-          title="Paella dish"
-        />
+        <CardMedia className={classes.media} image={formatImageUrl(imageUrl)} />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            Some text about the product
+            {description}
           </Typography>
         </CardContent>
-        <CardActions >
-          <IconButton aria-label="add to favorites">
+        <CardActions>
+          <IconButton>
             <FavoriteIcon />
           </IconButton>
           <IconButton>

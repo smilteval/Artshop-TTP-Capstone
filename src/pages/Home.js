@@ -1,42 +1,20 @@
-
-
-import ProductList from '../components/Home/ProductList'
-
-import React, { useEffect, useState } from 'react';
-
-import Product from '../components/Product';
-
+import React from "react";
+import ProductList from "../components/Home/ProductList";
 
 export default function Home() {
-
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        const getProducts = async () => {
-            const response = await fetch('http://localhost:1337/products');
-            const data = await response.json();
-            setProducts(data)
-        }
-
-        getProducts()
-    }, []);
-
-
-
-
-    return (
-
-        <div className = 'product-list'>
-            {products.map(product => (
-                
-                    <Product
-                        title={product.title}
-                        description={product.description}
-                        url = {product.image && product.image.url}
-                    />
-                
-            ))}
-
+  return (
+    <div className="home">
+      <div className="all-categories">
+        <div className="category">
+          <ProductList category="Paintings"/>
         </div>
-    );
+        <div className="category">
+          <ProductList category="Emoji Art"/>
+        </div>
+        <div className="category">
+          <ProductList category="Photography"/>
+        </div>
+      </div>
+    </div>
+  );
 }
