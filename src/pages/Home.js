@@ -1,6 +1,11 @@
+
+
+import ProductList from '../components/Home/ProductList'
+
 import React, { useEffect, useState } from 'react';
 
 import Product from '../components/Product';
+
 
 export default function Home() {
 
@@ -20,6 +25,7 @@ export default function Home() {
 
 
     return (
+
         <div className = 'product-list'>
             {products.map(product => (
                 
