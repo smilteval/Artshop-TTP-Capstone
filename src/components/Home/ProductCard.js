@@ -15,7 +15,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -52,9 +52,7 @@ export default function ProductCard() {
     <div>
       <Card className={classes.root}>
         <CardHeader
-          avatar={
-            <Avatar className={classes.avatar}>S</Avatar>
-          }
+          avatar={<Avatar className={classes.avatar}>S</Avatar>}
           title="Username"
           subheader="September 14, 2016"
         />
@@ -68,14 +66,14 @@ export default function ProductCard() {
             Some text about the product
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="share">
+        <CardActions >
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon />
+          </IconButton>
+          <IconButton>
             <AddShoppingCartIcon />
           </IconButton>
         </CardActions>
-        
-          
-        
       </Card>
     </div>
   );
