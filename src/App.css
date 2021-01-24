@@ -25,3 +25,7 @@
   justify-content: center;
   font-size: 3rem;
 }
+
+.product-list{
+  display: flex;
+}
