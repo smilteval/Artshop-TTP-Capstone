@@ -36,3 +36,12 @@
   width: auto;
   height: 20px;
 } */
+
+.product-list {
+  text-align: center;
+}
+
+.product {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
