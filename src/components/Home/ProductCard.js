@@ -49,7 +49,7 @@ export default function ProductCard() {
   };
 
   return (
-    <div>
+    <div className="product-card" style={{margin: "10px"}}>
       <Card className={classes.root}>
         <CardHeader
           avatar={<Avatar className={classes.avatar}>S</Avatar>}
