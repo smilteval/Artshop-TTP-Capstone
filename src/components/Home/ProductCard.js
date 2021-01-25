@@ -32,7 +32,7 @@ export default function ProductCard(props) {
   const classes = useStyles();
 
   return (
-    
+
     <div className="product-card" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
