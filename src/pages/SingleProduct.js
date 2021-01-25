@@ -33,7 +33,7 @@ export default function SingleProduct() {
         <div>Uploaded on: {product.date}</div>
         <div>
           By:
-          <Link to={#}>{product.artist && product.artist.username}</Link>
+          <Link>{product.artist && product.artist.username}</Link>
           {/* TO DO: replace a link with artists id */}
         </div>
       </div>
