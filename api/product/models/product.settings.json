@@ -35,6 +35,12 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "products"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "category": {
+      "type": "string"
     }
   }
 }
