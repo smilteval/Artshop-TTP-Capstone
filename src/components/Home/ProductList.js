@@ -36,8 +36,8 @@ export default function Home(props) {
                   description={product.description}
 
                   // if the image is null, show a placeholder image
-                  imageUrl={product.image === null ? "https://www.pacificfoodmachinery.com.au/media/catalog/product/placeholder/default/no-product-image-400x400_6.png": `https://ttp-art-store.herokuapp.com${product.image.url}`}
-                  
+                  imageUrl={product.image === null ? "https://www.pacificfoodmachinery.com.au/media/catalog/product/placeholder/default/no-product-image-400x400_6.png" : product.image.url}
+
                   artist={product.artist}
                   createdAt={product.created_at}
                 />
