@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="all-categories">
+        {/* filtering products based on category */}
         <div className="category">
           <ProductList category="Paintings"/>
         </div>
