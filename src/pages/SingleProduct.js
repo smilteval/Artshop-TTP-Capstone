@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import {useParams} from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SingleProduct() {
-    const productId = useParams().id;
+  const productId = useParams().id;
 
   const [product, setProduct] = useState([]);
 
@@ -30,7 +31,11 @@ export default function SingleProduct() {
         <div>${product.price}</div>
         <div>Description: {product.description}</div>
         <div>Uploaded on: {product.date}</div>
-        <div>By: {product.artist && product.artist.username}</div>
+        <div>
+          By:
+          <Link to={#}>{product.artist && product.artist.username}</Link>
+          {/* TO DO: replace a link with artists id */}
+        </div>
       </div>
     </div>
   );
