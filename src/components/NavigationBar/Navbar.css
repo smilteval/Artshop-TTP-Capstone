@@ -22,6 +22,8 @@
     top: 0;
     left: -100%;
     transition: 200ms;
+    z-index: 2;
+    /* Loads navbar in front of the elements */
   }
   
   .nav-menu.active {
@@ -65,6 +67,8 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    position: relative;
+    z-index: 2;
   }
   
   span {

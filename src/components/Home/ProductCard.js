@@ -52,6 +52,7 @@ export default function ProductCard(props) {
           </IconButton>
           <IconButton>
             <AddShoppingCartIcon />
+              {/* onClick={() => addToCart(product)} */}
           </IconButton>
         </CardActions>
       </Card>
