@@ -6,7 +6,7 @@ import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 
-import logo from '../../assets/ArtShop Logo Small.png';
+import logo from '../../assets/ArtShop Logo 2 Small.png';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
