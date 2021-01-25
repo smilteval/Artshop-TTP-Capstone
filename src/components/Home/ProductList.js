@@ -7,7 +7,7 @@ export default function Home(props) {
   //fetching product data from Strapi
   useEffect(() => {
     const getProducts = async () => {
-      const response = await fetch("http://localhost:1337/products");
+      const response = await fetch("https://ttp-art-store.herokuapp.com/products");
       const data = await response.json();
       setProducts(data);
     };

@@ -31,7 +31,7 @@ export default function ProductCard(props) {
 
   const classes = useStyles();
 
-  const formatImageUrl = (url) => `http://localhost:1337${url}`;
+  const formatImageUrl = (url) => `https://ttp-art-store.herokuapp.com${url}`;
 
   return (
     <div className="product-card" style={{ margin: "10px" }}>
