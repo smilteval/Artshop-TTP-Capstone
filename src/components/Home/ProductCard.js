@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
+import {Link} from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,12 +28,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ProductCard(props) {
-  let { title, description, imageUrl, createdAt } = props;
+  let { title, description, imageUrl, createdAt, price, id } = props;
 
   const classes = useStyles();
 
   return (
-
     <div className="product-card" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
@@ -40,7 +40,9 @@ export default function ProductCard(props) {
           title={title}
           subheader={createdAt}
         />
-        <CardMedia className={classes.media} image={imageUrl} />
+        <Link to={`/products/${id}`}>
+          <CardMedia className={classes.media} image={imageUrl} />
+        </Link>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             {description}
