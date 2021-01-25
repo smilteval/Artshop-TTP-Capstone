@@ -23,7 +23,7 @@ export default function Home(props) {
             <ProductCard
               title={product.title}
               description={product.description}
-              imageUrl={product.image.url}
+             // imageUrl={product.image.url}
               artist={product.artist}
               createdAt={product.created_at}
             />

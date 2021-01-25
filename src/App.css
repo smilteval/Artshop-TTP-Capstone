@@ -16,6 +16,20 @@
   font-family: 'Lato', sans-serif;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Artist-list {
+  display: flex;
+  padding: 16px;
+  text-align: center;
+  box-shadow:5px 5px 10px rgb(184, 183, 183);
+}
+
+
+
 /* .home,
 .reports,
 .products {
