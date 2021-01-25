@@ -1,16 +1,12 @@
 module.exports = ({ env }) => ({
+    // ...
     upload: {
-      provider: 'aws-s3',
-      accessKeyId: 'AKIAJQRJDNCHI2DOQ2YQ',
-      secretAccessKey: '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',
+      provider: 'cloudinary',
       providerOptions: {
-        region: 'us-east-1',
-        params: {
-          Bucket: 'ttp-art-store-upload-provider',
-        },
+        cloud_name: 'diwkguu1h',
+        api_key: '264582227317845',
+        api_secret: 'W4lyWmPeP5lgezk6LZZJFUCZ-CY',
       },
     },
+    // ...
   });
-
-//   accessKeyId: env('AKIAJQRJDNCHI2DOQ2YQ'),
-//   secretAccessKey: env('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'),
