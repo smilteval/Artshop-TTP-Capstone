@@ -16,14 +16,14 @@ useEffect(() => {
     
   }, []);
 
-  console.log(user);
+  //console.log(user);
 
 return (
   <div>
     <div className="Artist-list">
       
         {user.map((users) => {
-          console.log(users.username)
+          //console.log(users.username)
         return(
           
           <ArtistCard

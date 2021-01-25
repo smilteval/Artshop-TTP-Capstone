@@ -1,5 +1,6 @@
 import React from "react";
 import AddCircleIcon from '@material-ui/icons/AddCircle';
+import {Link} from "react-router-dom"
 
 import {
   makeStyles,
@@ -39,9 +40,9 @@ export default function ArtistCard(props) {
 
   const formatImageUrl = (url) => `https://ttp-art-store.herokuapp.com${url}`;
   
-console.log(username)
-console.log(email)
-console.log(id)
+// console.log(username)
+// console.log(email)
+// console.log(id)
 
   return (
     <div className="Artist" style={{ margin: "10px" }}>
@@ -59,8 +60,10 @@ console.log(id)
         </CardContent>
         <CardActions>
           <IconButton>
+          <Link to={`/Users/${id}`}>
             <AddCircleIcon  />
             Special Request
+            </Link>
           </IconButton >
 
 
