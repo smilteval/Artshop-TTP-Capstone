@@ -2,34 +2,39 @@ import React, { useEffect, useState } from "react";
 import ArtistCard from "./ArtistCard";
 
 export default function Artists(props) {
-  const [products, setProducts] = useState([]);
+  const [user, setUser] = useState([]);
 
-
-// When Strapi is Up
 
 useEffect(() => {
-    const getProducts = async () => {
-      const response = await fetch("https://ttp-art-store.herokuapp.com/products");
+    const getUser = async () => {
+      const response = await fetch("https://ttp-art-store.herokuapp.com/users");
       const data = await response.json();
-      setProducts(data);
+      setUser(data);
+      
     };
-    getProducts();
+    getUser();
+    
   }, []);
 
+  console.log(user);
 
 return (
   <div>
     <div className="Artist-list">
       
-        {products.map((product) => (
+        {user.map((users) => {
+          console.log(users.username)
+        return(
+          
           <ArtistCard
-            title={product.title}
-            description={product.description}
-            //imageUrl={product.image.url}
-            artist={product.artist}
-            createdAt={product.created_at}
+          username={users.username}
+          email={users.email}
+          id = {users.id}
           />
-        ))}
+
+        )
+        }
+        )}
       </div>
   </div>
 );

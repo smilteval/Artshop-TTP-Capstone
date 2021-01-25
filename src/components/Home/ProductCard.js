@@ -31,9 +31,8 @@ export default function ProductCard(props) {
 
   const classes = useStyles();
 
-  const formatImageUrl = (url) => `https://ttp-art-store.herokuapp.com${url}`;
-
   return (
+
     <div className="product-card" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
@@ -41,7 +40,7 @@ export default function ProductCard(props) {
           title={title}
           subheader={createdAt}
         />
-        <CardMedia className={classes.media} image={formatImageUrl(imageUrl)} />
+        <CardMedia className={classes.media} image={imageUrl} />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
             {description}
@@ -53,6 +52,7 @@ export default function ProductCard(props) {
           </IconButton>
           <IconButton>
             <AddShoppingCartIcon />
+              {/* onClick={() => addToCart(product)} */}
           </IconButton>
         </CardActions>
       </Card>

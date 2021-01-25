@@ -5,10 +5,8 @@ export default function Artists() {
     return (
         <div className = "artists">
                
-      <div className="all-categories">
         <div className="Artist-Page">
-          <ArtistList category="Meet Our Artists"/>
-        </div>
+          <ArtistList />
     </div>
         </div>
     )
