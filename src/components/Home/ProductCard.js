@@ -1,4 +1,8 @@
 import React from "react";
+import { addToCart } from '../Cart/Cart';
+//cart fcn
+import { product } from './ProductList';
+// cart fcn
 import {
   makeStyles,
   Card,
@@ -52,9 +56,10 @@ export default function ProductCard(props) {
           <IconButton>
             <FavoriteIcon />
           </IconButton>
-          <IconButton>
+          <IconButton >
+            {/* Click on the button to make it work */}
+            {/* onClick={() => addToCart(product)} */}
             <AddShoppingCartIcon />
-              {/* onClick={() => addToCart(product)} */}
           </IconButton>
         </CardActions>
       </Card>

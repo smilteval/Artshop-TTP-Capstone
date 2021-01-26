@@ -10,6 +10,12 @@
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
+    display: flex;
+  }
+
+  .cart-icon {
+    /* margin-left: 2rem; */
+    margin-right: 2rem;
   }
   
   .nav-menu {
@@ -77,7 +83,7 @@
 
   .logo{
     /* Moves the logo on the nav bar to center*/
-    margin-left: auto;
+    margin-left:auto;
     margin-right: auto;
   }
   
