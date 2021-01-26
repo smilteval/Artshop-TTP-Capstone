@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 export default function ArtistCard(props) {
-  const { username, email,id} = props;
+  const { blurb,name,imageUrl,id} = props;
 
   const classes = useStyles();
 
@@ -48,14 +48,14 @@ export default function ArtistCard(props) {
     <div className="Artist" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
-          avatar={<Avatar  alt="Artist"  className={classes.large}></Avatar> }
-          title={username}
+          avatar={<Avatar  alt="Artist" src= {imageUrl} className={classes.large}></Avatar> }
+          title={name}
           
         />
         {/* <CardMedia className={classes.media} image={formatImageUrl(imageUrl)} />  */}
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {"Blerb Of Artist"}
+            {blurb}
           </Typography>
         </CardContent>
         <CardActions>
