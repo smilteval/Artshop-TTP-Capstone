@@ -90,7 +90,7 @@ export default ({history}) => {
             </form>
 
             {/* link to sign up page */}
-            <p className="signUp">Don't have an account? <Link to="/signup">Sign up!</Link></p>
+            <p className="signUp">Don't have an account? <Link className="signUpButton" to="/signup">Sign up!</Link></p>
 
             {error && <p>{error}</p>}
 
