@@ -8,6 +8,7 @@ import Artists from './pages/Artists'
 import SingleArtist from './pages/SingleArtist'
 import SingleProduct from "./pages/SingleProduct";
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/users/:id" component={SingleArtist} />
           <Route path="/products/:id" component={SingleProduct} />
           <Route path ="/login" exact component = {Login}/>
+          <Route path ="/signup" exact component = {Signup}/>
 
 
         </Switch>
