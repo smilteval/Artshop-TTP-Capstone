@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 /* 
   #04364C
@@ -8,27 +8,23 @@
   #E88873
 */
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 .Artist-list {
   display: flex;
   padding: 16px;
   text-align: center;
-  box-shadow:5px 5px 10px rgb(184, 183, 183);
+  box-shadow: 5px 5px 10px rgb(184, 183, 183);
 }
-
-
 
 /* .home,
 .reports,
@@ -40,12 +36,9 @@ body {
   font-size: 3rem;
 } */
 
-
-
-.container{
+.container {
   width: 30px;
   height: 10px;
-  
 }
 
 /* .container{
@@ -53,32 +46,69 @@ body {
   height: 20px;
 } */
 
-.category{
+.category {
   margin: 50px 0;
 }
 
-.product-list{
-  width: 80%;
-  margin-left: 18%;
-  margin-right: 2%;;
-  text-align: right;
+.product-list {
+  width: 95%;
+  margin: 0px 2.5%;
 }
 
-.product-list-title{
+.product-card {
+  width: 15vw;
+}
+
+.product-list-title {
   margin-right: 20px;
   margin-bottom: 10px;
-  font-size:28px;
+  font-size: 28px;
+  text-align: right;
 }
 
 .product-list-items {
   display: flex;
   flex-direction: row-reverse;
   background-color: rgb(250, 250, 250);
-  box-shadow:5px 5px 10px rgb(184, 183, 183);
+  box-shadow: 5px 5px 10px rgb(184, 183, 183);
   padding: 10px;
-  margin:auto;
+  margin: auto;
   border-radius: 20px;
 }
+#card-title{
+  padding: 10px;
+}
 
+#card-bottom {
+  display: flex;
+  width: 100%;
+}
 
- 
+#card-price {
+  width: 50%;
+  font-size: 1.7vw;
+}
+
+#card-cart-btn {
+  width: 50%;
+}
+
+button.rec-dot{
+  background-color: rgb(165, 165, 165);
+  box-shadow: 0 0 1px 3px rgba(243, 243, 243, 0.5);
+}
+
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+  background-color: #04364C;
+  box-shadow: 0 0 1px 0px rgba(187, 28, 28, 0.5);
+}
+
+button.rec-arrow{
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0px 0px;
+}
+
+button.rec-arrow:hover:enabled, button.rec-arrow:focus:enabled{
+  background-color:#04364C;
+  box-shadow: 0px 0px;
+}

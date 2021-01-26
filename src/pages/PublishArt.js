@@ -1,11 +1,13 @@
 import React from 'react'
-import FileUpload  from "../components/PublishArt/FileUpload"
+
+import ProductForm from '../components/PublishArt/ProductForm'
 
 export default function PublishArt() {
     return (
         <div>
             <h3>Publish Art Page</h3>
-            <FileUpload/>
+            <ProductForm/>
+            
         </div>
         
     )
