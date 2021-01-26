@@ -33,10 +33,13 @@ export default function SingleProduct() {
         <div className="price">${product.price}</div>
 
         <div className="Info">
-        <div><strong>Description: </strong> {product.description}</div>
-        <div><strong>Uploaded on: </strong> {product.date}</div>
-        <div>
-          <strong>Created by: </strong>
+
+        <div className="InfoLeft"><strong>Description </strong></div>
+          <div className="InfoRight"> {product.description}</div>
+        <div className="InfoLeft"><strong>Uploaded on </strong></div>
+          <div className="InfoRight"> {product.date}</div>
+        <div className="InfoLeft"> <strong>Created by </strong></div>
+        <div className="InfoRight">
           <Link>{product.artist && product.artist.username}</Link>
           {/* TO DO: replace a link with artists id */}
         </div>
@@ -49,6 +52,6 @@ export default function SingleProduct() {
         {/* </div> */} 
 
       </div>
-    </div>
+    </div> 
   );
 }
