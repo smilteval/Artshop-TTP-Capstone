@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './SingleProduct.css'
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -28,15 +29,29 @@ export default function SingleProduct() {
       </div>
       <div className="product-info">
         <h3>{product.title}</h3>
-        <div>${product.price}</div>
-        <div>Description: {product.description}</div>
-        <div>Uploaded on: {product.date}</div>
-        <div>
-          By:
+
+        <div className="price">${product.price}</div>
+
+        <div className="Info">
+
+        <div className="InfoLeft"><strong>Description </strong></div>
+          <div className="InfoRight"> {product.description}</div>
+        <div className="InfoLeft"><strong>Uploaded on </strong></div>
+          <div className="InfoRight"> {product.date}</div>
+        <div className="InfoLeft"> <strong>Created by </strong></div>
+        <div className="InfoRight">
           <Link>{product.artist && product.artist.username}</Link>
           {/* TO DO: replace a link with artists id */}
         </div>
+        </div>
+
+        {/* <div className="add2Cart">
+          {/* button to add item to cart */}
+          {/* <div>Add to cart</div> */}
+          {/* <Link to="./cart"/> */}
+        {/* </div> */} 
+
       </div>
-    </div>
+    </div> 
   );
 }
