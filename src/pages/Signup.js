@@ -19,7 +19,7 @@ export default ({history}) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            //Check if the user is authenticated
+            //creates authenticated user.
             const response = await fetch ('https://ttp-art-store.herokuapp.com/auth/local/register', {
                 method: 'POST',
                 headers: {
@@ -57,7 +57,7 @@ export default ({history}) => {
                 Signup
             </h2>
 
-            {/* form for login */}
+            {/* form for signup */}
             <form onSubmit={handleSubmit}>
 
                 {/* email field */}

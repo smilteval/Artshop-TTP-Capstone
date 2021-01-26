@@ -1,5 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {UserContext} from '../context/UserContext';
+import { Link } from 'react-router-dom';
 
 export default ({history}) => {
 
@@ -84,6 +85,9 @@ export default ({history}) => {
                 {/* submit button */}
                 <button>Login</button>
             </form>
+
+            {/* link to sign up page */}
+            <p>Don't have an account? <Link to="/signup">Sign up!</Link></p>
 
             {error && <p>{error}</p>}
 
