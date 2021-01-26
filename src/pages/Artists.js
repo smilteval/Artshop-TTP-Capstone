@@ -1,9 +1,13 @@
 import React from 'react'
+import ArtistList from "../components/Artist/ArtistList";
 
 export default function Artists() {
     return (
         <div className = "artists">
-            <h1> Artists test</h1>
+               
+        <div className="Artist-Page">
+          <ArtistList />
+    </div>
         </div>
     )
 }
