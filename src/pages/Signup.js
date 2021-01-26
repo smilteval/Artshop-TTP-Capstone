@@ -1,6 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {UserContext} from '../context/UserContext';
-import { Link } from 'react-router-dom';
 
 export default ({history}) => {
 
@@ -20,14 +19,15 @@ export default ({history}) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            //Check if the user is authenticated
-            const response = await fetch ('https://ttp-art-store.herokuapp.com/auth/local', {
+            //creates authenticated user.
+            const response = await fetch ('https://ttp-art-store.herokuapp.com/auth/local/register', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
-                    identifier: email,
+                    username: email,
+                    email,
                     password
                 })
             })
@@ -54,10 +54,10 @@ export default ({history}) => {
     return (
         <div>
             <h2>
-                Login
+                Signup
             </h2>
 
-            {/* form for login */}
+            {/* form for signup */}
             <form onSubmit={handleSubmit}>
 
                 {/* email field */}
@@ -85,9 +85,6 @@ export default ({history}) => {
                 {/* submit button */}
                 <button>Login</button>
             </form>
-
-            {/* link to sign up page */}
-            <p>Don't have an account? <Link to="/signup">Sign up!</Link></p>
 
             {error && <p>{error}</p>}
 
