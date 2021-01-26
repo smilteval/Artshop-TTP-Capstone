@@ -1,0 +1,52 @@
+.product-image{
+    float: left;
+    min-height: 120px;
+    min-width: 120px;
+
+    max-height: 100%;
+    max-width: 100%;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    width:fit-content;
+    /* height: auto; */
+    margin-right: 3rem;
+    /* padding between text and image */
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.product-info{
+    float:center;
+    /* add column? */
+    line-height: 250%;
+    /* text-indent: 50px; I'm looking for the inverted indent*/
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+}
+
+.Info{
+    column-count: 2;
+    display: flex;
+    column-gap: 30px;
+}
+
+.price{
+    display:inline-table;
+    color: white;
+    height: 30px;
+    width: 70px;
+    border: 1px solid rgb(20, 128, 252);
+    background-color: rgb(20, 128, 252);
+    text-align: center;
+    /* TODO: Make it look like a button not a box */
+}
+
+/* .add2Cart {
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    border: 1px solid red;
+    background-color: red;
+    text-align: center;
+} */
