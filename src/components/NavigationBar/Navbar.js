@@ -27,7 +27,12 @@ function Navbar() {
                   <img src={logo} alt="Logo"/> 
                   {/* Using the link, when you click on the logo you will be redirected to home */}
                 </Link>
-                
+            </div>
+            <div className={'cart-icon'}>
+              {/* Cart icon in top right that brings you to cart page */}
+            <Link to='./cart' >
+              <FaIcons.FaCartPlus />
+            </Link> 
             </div>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

@@ -24,6 +24,8 @@ export default function Home(props) {
       
           {/* filtering products based on category */}
           {products.map((product) => {
+            // <div className="product" key={idx}>
+
             if (product.category === props.category) {
               return (
                 <ProductCard
@@ -42,7 +44,8 @@ export default function Home(props) {
                 />
               );
             }
-          })}
+            
+          })} 
         </div>
       </div>
     </div>
