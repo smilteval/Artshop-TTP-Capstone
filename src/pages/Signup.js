@@ -1,4 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
+import './Signup.css'
 import {UserContext} from '../context/UserContext';
 
 export default ({history}) => {
@@ -52,8 +53,8 @@ export default ({history}) => {
     }
 
     return (
-        <div>
-            <h2>
+        <div className="divSignup">
+            <h2 className="Signup">
                 Signup
             </h2>
 
@@ -61,8 +62,9 @@ export default ({history}) => {
             <form onSubmit={handleSubmit}>
 
                 {/* email field */}
-                <input
+                <input className="email"
                     type = 'email'
+                    placeholder="Email"
                     value = {email}
                     onChange = {(event) => {
                         setError('');
@@ -72,8 +74,9 @@ export default ({history}) => {
                 <br/>
 
                 {/* password field */}
-                <input
+                <input className="password"
                     type = 'password'
+                    placeholder="Password"
                     value = {password}
                     onChange = {(event) => {
                         setError('');
@@ -83,7 +86,7 @@ export default ({history}) => {
                 <br/>
 
                 {/* submit button */}
-                <button>Login</button>
+                <button className="button">Login</button>
             </form>
 
             {error && <p>{error}</p>}
