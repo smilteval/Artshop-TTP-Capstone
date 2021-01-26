@@ -32,9 +32,9 @@
       "type": "richtext"
     },
     "artist": {
+      "via": "products",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "products"
+      "model": "user"
     },
     "price": {
       "type": "decimal"

@@ -60,8 +60,25 @@
       "configurable": false
     },
     "products": {
-      "via": "artist",
-      "collection": "product"
+      "collection": "product",
+      "via": "artist"
+    },
+    "blurb": {
+      "type": "richtext"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
     }
   }
 }
