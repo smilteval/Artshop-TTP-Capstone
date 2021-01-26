@@ -8,6 +8,7 @@ export default function ProductForm() {
   const [file, setFile] = useState(null);
   const [imagePreview, setImagePreview] = useState();
 
+  //image preview
   useEffect(() => {
     if (file) {
       const reader = new FileReader();
@@ -72,21 +73,21 @@ export default function ProductForm() {
             onChange={(event) => setCategory(event.target.value)}
           >
             <option value=" " selected disabled hidden>
-              {" "}
               Categories{" "}
             </option>
             <option value="Paintings">Paintings</option>
             <option value="Photography">Photography</option>
           </select>
         </div>
-
+        <br />
         <input
           type="file"
           placeholder="Add a file"
           onChange={(event) => setFile(event.target.files[0])}
         />
-<br/>
+        <br />
         <img src={imagePreview} />
+        <br/>
         <button>Submit</button>
       </form>
     </div>
