@@ -17,7 +17,7 @@ useEffect(() => {
   }, []);
 
   //console.log(user);
-
+  console.log(user)
 return (
   <div>
     <div className="Artist-list">
@@ -27,14 +27,18 @@ return (
         return(
           
           <ArtistCard
-          username={users.username}
-          email={users.email}
+          name={users.name}
           id = {users.id}
+          blurb = {users.blurb}
+          imageUrl={users.avatar && users.avatar.url}
+        
+          
           />
 
         )
         }
         )}
+
       </div>
   </div>
 );

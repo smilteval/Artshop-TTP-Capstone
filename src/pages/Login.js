@@ -1,4 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
+import './Login.css'
 import {UserContext} from '../context/UserContext';
 import { Link } from 'react-router-dom';
 
@@ -52,8 +53,8 @@ export default ({history}) => {
     }
 
     return (
-        <div>
-            <h2>
+        <div className="divLogin">
+            <h2 className="Login">
                 Login
             </h2>
 
@@ -61,8 +62,9 @@ export default ({history}) => {
             <form onSubmit={handleSubmit}>
 
                 {/* email field */}
-                <input
+                <input className="email"
                     type = 'email'
+                    placeholder="Email"
                     value = {email}
                     onChange = {(event) => {
                         setError('');
@@ -72,8 +74,9 @@ export default ({history}) => {
                 <br/>
 
                 {/* password field */}
-                <input
+                <input className="password"
                     type = 'password'
+                    placeholder="Password"
                     value = {password}
                     onChange = {(event) => {
                         setError('');
@@ -83,11 +86,11 @@ export default ({history}) => {
                 <br/>
 
                 {/* submit button */}
-                <button>Login</button>
+                <button className="button">Login</button>
             </form>
 
             {/* link to sign up page */}
-            <p>Don't have an account? <Link to="/signup">Sign up!</Link></p>
+            <p className="signUp">Don't have an account? <Link to="/signup">Sign up!</Link></p>
 
             {error && <p>{error}</p>}
 

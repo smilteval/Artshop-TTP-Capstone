@@ -1,0 +1,27 @@
+.divSignup{
+    text-align: center;
+}
+
+h2.Signup{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.email{
+    margin-bottom: 8px;
+}
+
+.password{
+    margin-bottom: 20px;
+}
+
+.button{
+    margin-bottom: 1rem;
+    flex-direction: row;
+    width: 155px;
+}
+
+.signUp{
+    margin-bottom: 1rem;
+}
