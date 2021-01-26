@@ -86,7 +86,7 @@ export default ({history}) => {
                 <br/>
 
                 {/* submit button */}
-                <button className="button">Login</button>
+                <button className="button">Signup</button>
             </form>
 
             {error && <p>{error}</p>}
