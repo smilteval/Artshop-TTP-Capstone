@@ -20,7 +20,8 @@ export default function SingleProduct() {
     getProduct();
   }, []);
 
-  console.log(product);
+  
+  let date = (product.createdAt)
 
   return (
     <div className="single-product-page">
@@ -36,8 +37,8 @@ export default function SingleProduct() {
 
         <div className="InfoLeft"><strong>Description </strong></div>
           <div className="InfoRight"> {product.description}</div>
-        <div className="InfoLeft"><strong>Uploaded on </strong></div>
-          <div className="InfoRight"> {product.date}</div>
+        <div className="InfoLeft"><strong>Uploaded on </strong>{date}</div>
+          <div className="InfoRight"> </div>
         <div className="InfoLeft"> <strong>Created by </strong></div>
         <div className="InfoRight">
           <Link>{product.artist && product.artist.username}</Link>
