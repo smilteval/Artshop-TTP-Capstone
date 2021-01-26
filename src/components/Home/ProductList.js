@@ -21,6 +21,7 @@ export default function Home(props) {
       <div className="product-list">
         <h3 className="product-list-title">{props.category}</h3>
         <div className="product-list-items">
+      
           {/* filtering products based on category */}
           {products.map((product) => {
             // <div className="product" key={idx}>
