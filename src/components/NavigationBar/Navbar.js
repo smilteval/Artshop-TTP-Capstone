@@ -30,7 +30,7 @@ function Navbar() {
             </div>
             <div className={'cart-icon'}>
               {/* Cart icon in top right that brings you to cart */}
-            <Link to='./cart' >
+            <Link to='../cart' >
               <FaIcons.FaCartPlus />
             </Link> 
             </div>
