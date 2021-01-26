@@ -25,7 +25,7 @@ export const SidebarData = [
   },
   {
     title: 'Publish Art',
-    path: '/publish art',
+    path: '/publish',
     icon: <IoIcons.IoMdSend />,
     cName: 'nav-text'
   },
