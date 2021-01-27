@@ -60,7 +60,6 @@ export default function Header() {
           <h1 className={classes.appbarTitle}>
             <span >ARTSHOP</span>
           </h1>
-
         </Toolbar>
       </AppBar>
 

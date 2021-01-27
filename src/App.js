@@ -12,21 +12,19 @@ import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage"
 import Cart from './pages/Cart';
 import Footer from "./components/Footer/Footer";
+import {Redirect} from 'react-router-dom'
 import Header  from "./components/Landing/Header"
 import TopBar from "./components/Landing/TopBar"
 
 
 function App() {
-  const currentPath = window.location.pathname
   return (
     <>
-    
       <Router>
-      
-      {currentPath === "/" ? <TopBar/>  : <Navbar/>}
         <Switch>
-          <Route path = "/" exact component = {LandingPage}/>  
-      
+        <Route path = "/" exact component = {LandingPage}/>
+          <div>
+          <Navbar />
           <Route path="/home" exact component={Home} />
           <Route path="/artists" exact component={Artists} />
           <Route path="/users/:id" component={SingleArtist} />
@@ -35,13 +33,11 @@ function App() {
           <Route path="/publish" exact component={PublishArt} />
           <Route path ="/signup" exact component = {Signup}/>
           <Route path ="/cart" exact component = {Cart}/>
-
-
+          </div>
         </Switch>
         <Footer />
       </Router>
     </>
   );
 }
-
 export default App;
