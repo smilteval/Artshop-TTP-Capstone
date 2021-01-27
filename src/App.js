@@ -18,9 +18,10 @@ function App() {
   return (
     <>
       <Router>
+      <Navbar />
         <Switch>
+
           <Route path = "/" exact component = {LandingPage}/>
-          <Navbar />
           <Route path="/home" exact component={Home} />
           <Route path="/artists" exact component={Artists} />
           <Route path="/users/:id" component={SingleArtist} />
