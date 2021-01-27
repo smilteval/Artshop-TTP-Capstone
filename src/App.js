@@ -10,7 +10,7 @@ import Login from './pages/Login';
 import PublishArt from "./pages/PublishArt";
 import Signup from './pages/Signup';
 import Cart from './pages/Cart';
-
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
 
 
         </Switch>
+        <Footer />
       </Router>
     </>
   );
