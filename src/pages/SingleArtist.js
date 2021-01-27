@@ -43,7 +43,7 @@ const formSubmit = (event) => {
     
       <h3>{User.username}</h3>
         <p class= "title">My Email: {User.email}</p>
-        <p><button>My Image Collection</button></p>
+        <p><button class ='button1' >My Image Collection</button></p>
       </div>
 
       <div>
