@@ -23,7 +23,7 @@ function Navbar() {
           </Link>
             <div className= "logo">
               {/* This is the logo on the navbar */}
-                <Link to="/">
+                <Link to="/home">
                   <img src={logo} alt="Logo"/> 
                   {/* Using the link, when you click on the logo you will be redirected to home */}
                 </Link>

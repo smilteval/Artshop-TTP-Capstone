@@ -47,7 +47,7 @@ export default ({history}) => {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username: username,
+                    username: email,
                     // changed so username is not email
                     email,
                     password

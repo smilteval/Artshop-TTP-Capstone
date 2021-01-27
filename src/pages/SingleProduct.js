@@ -37,8 +37,8 @@ export default function SingleProduct() {
         <div className="Info">
 
 
-        <div className="InfoLeft"><strong>Uploaded on </strong>{date}</div>
-          <div className="InfoRight"> </div>
+        <div className="InfoLeft"><strong>Uploaded on </strong></div>
+          <div className="InfoRight"> {date} </div>
         <div className="InfoLeft"> <strong>Created by </strong></div>
         <div className="InfoRight">
           <Link className="artistName">{product.artist && product.artist.username}</Link>
