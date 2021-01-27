@@ -11,7 +11,7 @@ import PublishArt from "./pages/PublishArt";
 import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage"
 import Cart from './pages/Cart';
-
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -32,6 +32,7 @@ function App() {
 
 
         </Switch>
+        <Footer />
       </Router>
     </>
   );

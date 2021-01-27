@@ -7,8 +7,10 @@ export default ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
+
     const [file, setFile] = useState(null);
-    // const [imagePreview, setImagePreview] = useState(); 
+    const [imagePreview, setImagePreview] = useState();
+    
     const [error, setError] = useState('');
 
     // Come back here and add to the imagePreview in the useEffect 
@@ -20,7 +22,20 @@ export default ({history}) => {
         if(user){
             history.push('/');
         }
-    }, [user])
+    }, [user]);
+
+    //image preview for your avatar/pfp
+  useEffect(() => {
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setImagePreview(null);
+    }
+  }, [file]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -70,7 +85,7 @@ export default ({history}) => {
                  {/* username field */}
                  <input className="username"
                     type = 'username'
-                    placeholder="Username"
+                    placeholder="Username or Full Name"
                     value = {username}
                     onChange = {(event) => {
                         setError('');
@@ -108,16 +123,17 @@ export default ({history}) => {
                  <input className="avatar"
                     type = 'file'
                     placeholder="Add an image"
-                    value = {password}
                     onChange = {(event) => {
                         // setError('');
                         setFile(event.target.files[0])}
+                        // changes text from add an image to what the image is
                     }
                 />
                 <br/>
 
-                {/* <img src={imagePreview} /> */}
-                {/* <br/> */}
+                <img src={imagePreview} />
+                {/* can visibly see the image */}
+                {/* <br/>
 
                 {/* submit button */}
                 <button className="button">Signup</button>
