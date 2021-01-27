@@ -29,6 +29,9 @@ const useStyles = makeStyles({
     fontSize: '1.1rem',
     color: '#ddd',
   },
+  buttons: {
+    backgroundColor: '#000000',
+  }
 });
 
 export default function ImageCard({ images, checked }) {
@@ -40,7 +43,6 @@ export default function ImageCard({ images, checked }) {
         <CardMedia
           className={classes.media}
           image={images.imageUrl}
-          title="Contemplative Reptile"
         />
         <CardContent>
           <Typography
@@ -61,9 +63,10 @@ export default function ImageCard({ images, checked }) {
           </Typography>
         </CardContent>
         <CardActions>
-        <Link to={'/login'} >
-                 <Button size= 'large' color="secondary" >
+        <Link to={images.link} >
+                 <Button size= 'large' color="secondary" className = {classes.buttons} >
                 {images.button}
+                
                 </Button> 
                 </Link> 
         </CardActions>
