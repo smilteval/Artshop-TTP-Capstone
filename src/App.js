@@ -12,17 +12,20 @@ import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage"
 import Cart from './pages/Cart';
 import Footer from "./components/Footer/Footer";
+import Header  from "./components/Landing/Header"
+import TopBar from "./components/Landing/TopBar"
 
 
 function App() {
+  const currentPath = window.location.pathname
   return (
     <>
     
       <Router>
       
-      <Navbar />
+      {currentPath === "/" ? <TopBar/>  : <Navbar/>}
         <Switch>
-         <Route path = "/" exact component = {LandingPage}/> 
+          <Route path = "/" exact component = {LandingPage}/>  
       
           <Route path="/home" exact component={Home} />
           <Route path="/artists" exact component={Artists} />
