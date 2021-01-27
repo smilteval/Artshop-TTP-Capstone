@@ -14,7 +14,7 @@ export default ({history}) => {
 
     useEffect(() => {
         if(user){
-            history.push('/');
+            history.push('/home');
         }
     }, [user])
 
