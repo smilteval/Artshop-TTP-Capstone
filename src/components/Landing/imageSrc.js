@@ -8,6 +8,7 @@ description: "Use our site to publish your art and sell to our users! You can al
 imageUrl: ImageOne,
 time: 1500,
 button: "Start Selling"
+
     },
     {
         title: 'Buy Art!',
@@ -15,6 +16,7 @@ button: "Start Selling"
         imageUrl: ImageTwo,
         time: 1500,
         button: "Start Buying"
+        
             }
 ]
 

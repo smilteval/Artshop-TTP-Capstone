@@ -6,7 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { CardActions, Collapse } from '@material-ui/core';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   root: {
@@ -60,9 +61,11 @@ export default function ImageCard({ images, checked }) {
           </Typography>
         </CardContent>
         <CardActions>
+        <Link to={'/login'} >
                  <Button size= 'large' color="secondary" >
                 {images.button}
                 </Button> 
+                </Link> 
         </CardActions>
       </Card>
     </Collapse>
