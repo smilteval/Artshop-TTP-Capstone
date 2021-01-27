@@ -35,15 +35,16 @@ export default function SingleProduct() {
 
         <div className="Info">
 
-        <div className="InfoLeft"><strong>Description </strong></div>
-          <div className="InfoRight"> {product.description}</div>
+
         <div className="InfoLeft"><strong>Uploaded on </strong>{date}</div>
           <div className="InfoRight"> </div>
         <div className="InfoLeft"> <strong>Created by </strong></div>
         <div className="InfoRight">
-          <Link>{product.artist && product.artist.username}</Link>
+          <Link className="artistName">{product.artist && product.artist.username}</Link>
           {/* TO DO: replace a link with artists id */}
         </div>
+        <div className="InfoLeft"><strong>Description </strong></div>
+          <div className="InfoRight"> {product.description}</div>
         </div>
 
         {/* <div className="add2Cart">
