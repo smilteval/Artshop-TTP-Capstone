@@ -6,9 +6,11 @@ import Home from "./pages/Home";
 import Artists from "./pages/Artists";
 import SingleArtist from "./pages/SingleArtist";
 import SingleProduct from "./pages/SingleProduct";
-import Login from "./pages/Login";
+import Login from './pages/Login';
 import PublishArt from "./pages/PublishArt";
-import Signup from "./pages/Signup";
+import Signup from './pages/Signup';
+import Cart from './pages/Cart';
+
 
 function App() {
   return (
@@ -20,9 +22,12 @@ function App() {
           <Route path="/artists" exact component={Artists} />
           <Route path="/users/:id" component={SingleArtist} />
           <Route path="/products/:id" component={SingleProduct} />
-          <Route path="/login" exact component={Login} />
+          <Route path ="/login" exact component = {Login}/>
           <Route path="/publish" exact component={PublishArt} />
-          <Route path="/signup" exact component={Signup} />
+          <Route path ="/signup" exact component = {Signup}/>
+          <Route path ="/cart" exact component = {Cart}/>
+
+
         </Switch>
       </Router>
     </>
