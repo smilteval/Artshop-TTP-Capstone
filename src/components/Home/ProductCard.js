@@ -1,5 +1,5 @@
 import React from "react";
-import { addToCart } from "../Cart/Cart";
+import { addToCart } from "../Cart/AddToCart";
 //cart fcn
 import { product } from "./ProductList";
 // cart fcn

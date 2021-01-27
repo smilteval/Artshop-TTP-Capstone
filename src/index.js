@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContextProvider from './context/UserContext';
+import { CartProvider } from './context/cart_context'
+import { ProductsProvider } from './context/products_context'
+
 
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
-      <App />
+        <ProductsProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductsProvider>
     </UserContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

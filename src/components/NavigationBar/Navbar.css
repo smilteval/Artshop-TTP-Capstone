@@ -30,6 +30,7 @@
     transition: 200ms;
     z-index: 2;
     /* Loads navbar in front of the elements */
+    padding-right: 2rem;
   }
   
   .nav-menu.active {
@@ -77,7 +78,7 @@
     z-index: 2;
   }
   
-  .navbar span {
+  span {
     margin-left: 16px;
   }
 

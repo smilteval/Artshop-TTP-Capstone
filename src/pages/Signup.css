@@ -1,5 +1,12 @@
 .divSignup{
     text-align: center;
+    padding: 30px;
+    border-radius: 59px;
+    width: 50%;
+    height: 50%;
+
+    display: block;
+    margin: auto;
 }
 
 h2.Signup{
@@ -8,20 +15,47 @@ h2.Signup{
     margin-bottom: 2rem;
 }
 
+.username{
+    margin-bottom: 8px;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 4px;
+    padding: 6px 10px;
+    /* vertical size */
+    width: 90%;
+}
+
 .email{
     margin-bottom: 8px;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 4px;
+    padding: 6px 10px;
+    /* vertical size */
+    width: 90%;
 }
 
 .password{
     margin-bottom: 20px;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 4px;
+    padding: 6px 10px;
+    /* vertical size */
+    width: 90%;
+}
+
+.avatar{
+    /* may need to change name to file? */
+    margin-bottom: 20px;
+    /* will leave it uncentered, difficult ot implement */
 }
 
 .button{
     margin-bottom: 1rem;
     flex-direction: row;
     width: 155px;
+    box-shadow: 2px 2px 5px grey;
 }
 
 .signUp{
+    margin-bottom: 1rem;
     margin-bottom: 1rem;
 }

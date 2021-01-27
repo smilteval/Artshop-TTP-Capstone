@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
+
 /* 
   #04364C
   #2E5769
@@ -7,7 +8,9 @@
   #A37774
   #E88873
 */
-
+.testing{
+  font-Family: 'Tenor Sans',  sans-serif;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -121,7 +124,7 @@ select{
   object-fit: cover;
 }
 
-.button {
+.button1 {
   border: none;
   outline: 0;
   display: inline-block;
