@@ -1,0 +1,22 @@
+#product-upload-form {
+  padding: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+#product-image-upload{
+    padding-bottom: 20px;
+}
+
+#product-info-upload{
+    display: flex;
+    flex-direction: column;
+}
+
+#upload-photo-btn {
+  width: 300px;
+  height: 200px;
+  border-width: 0;
+  font-size: 20px;
+  padding: 20px;
+}
