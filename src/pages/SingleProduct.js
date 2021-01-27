@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './SingleProduct.css'
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import AddToCart from "../components/Cart/AddToCart";
 
 export default function SingleProduct() {
   const productId = useParams().id;
@@ -42,11 +43,7 @@ export default function SingleProduct() {
         </div>
         </div>
 
-        {/* <div className="add2Cart">
-          {/* button to add item to cart */}
-          {/* <div>Add to cart</div> */}
-          {/* <Link to="./cart"/> */}
-        {/* </div> */} 
+        <AddToCart product={product}/>
 
       </div>
     </div>
