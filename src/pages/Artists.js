@@ -7,6 +7,7 @@ export default function Artists() {
                
         <div className="Artist-Page">
           <ArtistList />
+          
     </div>
         </div>
     )

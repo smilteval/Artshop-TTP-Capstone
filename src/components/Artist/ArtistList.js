@@ -32,7 +32,6 @@ return (
           blurb = {users.blurb}
           imageUrl={users.avatar && users.avatar.url}
         
-          
           />
 
         )
