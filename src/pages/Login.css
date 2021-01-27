@@ -1,5 +1,13 @@
 .divLogin{
     text-align: center;
+    padding: 30px;
+    border-radius: 59px;
+    width: 50%;
+    height: 50%;
+
+    display: block;
+    margin: auto;
+    /* centers image */
 }
 
 h2.Login{
@@ -10,20 +18,30 @@ h2.Login{
 
 .email{
     margin-bottom: 8px;
-    box-shadow: 2px 2px #4b4b4b;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 4px;
+    padding: 6px 10px;
+    /* vertical size */
+    width: 90%;
 }
 
 .password{
     margin-bottom: 20px;
-    box-shadow: 2px 2px #4b4b4b;
+    border: 2px solid rgb(92, 92, 92);
+    border-radius: 4px;
+    padding: 6px 10px;
+    /* vertical size */
+    width: 90%;
 }
 
 .button{
     margin-bottom: 1rem;
     flex-direction: row;
     width: 155px;
-    box-shadow: 2px 2px #4b4b4b;
+    box-shadow: 2px 2px 5px grey;
+
 }
+
 
 .signUp{
     font-size: 22px;

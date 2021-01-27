@@ -6,7 +6,12 @@ export default ({history}) => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [file, setFile] = useState(null);
+    // const [imagePreview, setImagePreview] = useState(); 
     const [error, setError] = useState('');
+
+    // Come back here and add to the imagePreview in the useEffect 
 
     const {user, setUser} = useContext(UserContext);
     console.log("user ", user);
@@ -27,7 +32,8 @@ export default ({history}) => {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username: email,
+                    username: username,
+                    // changed so username is not email
                     email,
                     password
                 })
@@ -61,6 +67,19 @@ export default ({history}) => {
             {/* form for signup */}
             <form onSubmit={handleSubmit}>
 
+                 {/* username field */}
+                 <input className="username"
+                    type = 'username'
+                    placeholder="Username"
+                    value = {username}
+                    onChange = {(event) => {
+                        setError('');
+                        setUsername(event.target.value)
+                    }}
+                />
+                <br/>
+                {/* TODO: NOT SURE IF HOOKED UP */}
+
                 {/* email field */}
                 <input className="email"
                     type = 'email'
@@ -84,6 +103,21 @@ export default ({history}) => {
                     }
                 />
                 <br/>
+
+                 {/* Avatar field */}
+                 <input className="avatar"
+                    type = 'file'
+                    placeholder="Add an image"
+                    value = {password}
+                    onChange = {(event) => {
+                        // setError('');
+                        setFile(event.target.files[0])}
+                    }
+                />
+                <br/>
+
+                {/* <img src={imagePreview} /> */}
+                {/* <br/> */}
 
                 {/* submit button */}
                 <button className="button">Signup</button>

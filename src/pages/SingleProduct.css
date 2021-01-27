@@ -74,6 +74,12 @@ img{
     display:inline-block;
 }
 
+.artistName{
+    font-size: 13pt;
+    color: blue;
+    box-shadow: 0px 2px blue; 
+}
+
 .price{ 
     display:inline-table;
     color: white;
