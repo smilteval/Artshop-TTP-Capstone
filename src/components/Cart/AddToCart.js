@@ -6,7 +6,8 @@ import { useCartContext } from '../../context/cart_context'
 import AmountButtons from './AmountButtons'
 
 const AddToCart = ({ product}) => {
-    const {addToCart} = useCartContext()
+    const {addToCart,removeItem} = useCartContext()
+
     const { id } = product
     
 
@@ -23,9 +24,12 @@ const AddToCart = ({ product}) => {
     const decrease = () => {
         setAmount((oldAmount) => {
             let tempAmount = oldAmount - 1
+    
             return tempAmount
+            
         })
     }
+  
     
   return (
       <Wrapper>

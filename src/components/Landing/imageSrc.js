@@ -8,7 +8,7 @@ description: "Use our site to publish your art and sell to our users! You can al
 imageUrl: ImageOne,
 time: 1500,
 button: "Start Selling",
-link:'/home'
+link:'/login'
     },
     {
         title: 'Buy Art!',
