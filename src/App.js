@@ -8,18 +8,25 @@ import SingleArtist from "./pages/SingleArtist";
 import SingleProduct from "./pages/SingleProduct";
 import Login from './pages/Login';
 import PublishArt from "./pages/PublishArt";
-import Signup from './pages/Signup';
+import Signup from "./pages/Signup";
+import LandingPage from "./pages/LandingPage"
 import Cart from './pages/Cart';
+import Footer from "./components/Footer/Footer";
 import Checkout from './pages/Checkout';
+import {Redirect} from 'react-router-dom'
+import Header  from "./components/Landing/Header"
+import TopBar from "./components/Landing/TopBar"
 
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
+        <Route path = "/" exact component = {LandingPage}/>
+          <div>
+          <Navbar />
+          <Route path="/home" exact component={Home} />
           <Route path="/artists" exact component={Artists} />
           <Route path="/users/:id" component={SingleArtist} />
           <Route path="/products/:id" component={SingleProduct} />
@@ -28,12 +35,12 @@ function App() {
           <Route path ="/signup" exact component = {Signup}/>
           <Route path ="/cart" exact component = {Cart}/>
           <Route path ="/checkout" exact component = {Checkout}/>
-
-
+          </div>
         </Switch>
+        <Footer />
       </Router>
+
     </>
   );
 }
-
 export default App;
