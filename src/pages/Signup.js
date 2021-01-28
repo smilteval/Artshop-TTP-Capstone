@@ -1,159 +1,198 @@
-import React, {useContext, useState, useEffect} from 'react'
-import './Signup.css'
-import {UserContext} from '../context/UserContext';
+import React, { useContext, useState, useEffect } from "react";
+import "./Signup.css";
+import { UserContext } from "../context/UserContext";
 
-export default ({history}) => {
+export default ({ history }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [blurb, setBlurb] = useState("");
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [username, setUsername] = useState('');
-    const [artist, setArtist] = useState('');
+  const [avatar, setAvatar] = useState(null);
+  const [imagePreview, setImagePreview] = useState();
 
-    const [file, setFile] = useState(null);
-    const [imagePreview, setImagePreview] = useState();
-    
-    const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
-    // Come back here and add to the imagePreview in the useEffect 
+  // Come back here and add to the imagePreview in the useEffect
 
-    const {user, setUser} = useContext(UserContext);
-    console.log("user ", user);
+  const { user, setUser } = useContext(UserContext);
+  console.log("user ", user);
 
-    useEffect(() => {
-        if(user){
-            history.push('/home');
-        }
-    }, [user]);
-
-    //image preview for your avatar/pfp
   useEffect(() => {
-    if (file) {
+    if (user) {
+      history.push("/home");
+    }
+  }, [user]);
+
+  //image preview for your avatar/pfp
+  useEffect(() => {
+    if (avatar) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result);
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(avatar);
     } else {
       setImagePreview(null);
     }
-  }, [file]);
+  }, [avatar]);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            //creates authenticated user.
-            const response = await fetch ('https://ttp-art-store.herokuapp.com/auth/local/register', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username,
-                    // changed so username is not email
-                    email,
-                    password
-                })
-            })
-    
-            const data = await response.json();
-            console.log("data", data);
-            
-            //Display error if there is one
-            if(data.message){
-                setError(data.message[0].messages[0].message)
-    
-                return //Stop execution
-            }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+    //   const formData = new FormData();
+    //   formData.append(
+    //     "data",
+    //     JSON.stringify({
+    //       username,
+    //       // changed so username is not email
+    //       email,
+    //       password,
+    //       name,
+    //       blurb,
+    //     })
+    //   );
+    //   formData.append("files.image", avatar);
 
-            setUser(data);
+    //   const response = await fetch(
+    //     "https://ttp-art-store.herokuapp.com/auth/local/register",
+    //     {
+    //       method: "POST",
+    //       body: formData,
+    //     }
+    //   );
+    //   const data = await response.json();
 
-        } catch(err){
-            setError('Something went wrong' + err)
-        }
+        //creates authenticated user.
+        const response = await fetch(
+          "https://ttp-art-store.herokuapp.com/auth/local/register",
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({
+              username,
+              email,
+              password,
+              name,
+              blurb,
+            }),
+          }
+        );
 
+        const data = await response.json();
+      console.log("data", data);
 
+      //Display error if there is one
+      if (data.message) {
+        setError(data.message[0].messages[0].message);
+
+        return; //Stop execution
+      }
+
+      setUser(data);
+    } catch (err) {
+      setError("Something went wrong" + err);
     }
+  };
 
-    return (
-        <div className="divSignup">
-            <h2 className="Signup">
-                Signup
-            </h2>
+  return (
+    <div className="divSignup">
+      <h2 className="Signup">Signup</h2>
 
-            {/* form for signup */}
-            <form onSubmit={handleSubmit}>
+      {/* form for signup */}
+      <form onSubmit={handleSubmit}>
+        {/* username field */}
+        <input
+          className="username"
+          type="text"
+          placeholder="Username "
+          value={username}
+          onChange={(event) => {
+            setError("");
+            setUsername(event.target.value);
+          }}
+        />
+        <br />
 
-                 {/* username field */}
-                 <input className="username"
-                    type = 'text'
-                    placeholder="Username "
-                    value = {username}
-                    onChange = {(event) => {
-                        setError('');
-                        setUsername(event.target.value)
-                    }}
-                />
-                <br/>
+        {/* Full name field */}
+        <input
+          className="artist"
+          type="text"
+          placeholder="Full Name"
+          value={name}
+          onChange={(event) => {
+            setError("");
+            setName(event.target.value);
+          }}
+        />
+        <br />
+        {/* TODO: NOT SURE IF HOOKED UP */}
 
-                {/* Full name field */}
-                <input className="artist"
-                    type = 'text'
-                    placeholder="Full Name"
-                    value = {artist}
-                    onChange = {(event) => {
-                        setError('');
-                        setArtist(event.target.value)
-                    }}
-                />
-                <br/>
-                {/* TODO: NOT SURE IF HOOKED UP */}
+        {/* email field */}
+        <input
+          className="email"
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(event) => {
+            setError("");
+            setEmail(event.target.value);
+          }}
+        />
+        <br />
 
-                {/* email field */}
-                <input className="email"
-                    type = 'email'
-                    placeholder="Email"
-                    value = {email}
-                    onChange = {(event) => {
-                        setError('');
-                        setEmail(event.target.value)
-                    }}
-                />
-                <br/>
+        {/* password field */}
+        <input
+          className="password"
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(event) => {
+            setError("");
+            setPassword(event.target.value);
+          }}
+        />
+        <br />
 
-                {/* password field */}
-                <input className="password"
-                    type = 'password'
-                    placeholder="Password"
-                    value = {password}
-                    onChange = {(event) => {
-                        setError('');
-                        setPassword(event.target.value)}
-                    }
-                />
-                <br/>
+        <input
+          className="blurb"
+          type="text"
+          placeholder="Tell us about yourself"
+          value={blurb}
+          onChange={(event) => {
+            setError("");
+            setBlurb(event.target.value);
+          }}
+        />
+        <br />
 
-                 {/* Avatar field */}
-                 <input className="avatar"
-                    type = 'file'
-                    placeholder="Add an image"
-                    onChange = {(event) => {
-                        // setError('');
-                        setFile(event.target.files[0])}
-                        // changes text from add an image to what the image is
-                    }
-                />
-                <br/>
+        {/* Avatar field */}
+        <input
+          className="avatar"
+          type="file"
+          placeholder="Add an image"
+          onChange={
+            (event) => {
+              // setError('');
+              setAvatar(event.target.files[0]);
+            }
+            // changes text from add an image to what the image is
+          }
+        />
+        <br />
 
-                <img className="image" src={imagePreview} />
-                {/* can visibly see the image */}
-                {/* <br/>
+        <img className="image" src={imagePreview} />
+        {/* can visibly see the image */}
+        {/* <br/>
 
                 {/* submit button */}
-                <button className="button">Signup</button>
-            </form>
+        <button className="button">Signup</button>
+      </form>
 
-            {error && <p>{error}</p>}
-
-        </div>
-    )
-}
+      {error && <p>{error}</p>}
+    </div>
+  );
+};

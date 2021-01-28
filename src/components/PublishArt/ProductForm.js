@@ -82,8 +82,7 @@ const categories = [
   {
     value: "Pixel Art",
     label: "Pixel Art",
-  }
-
+  },
 ];
 
 export default function ProductForm() {
@@ -93,7 +92,7 @@ export default function ProductForm() {
   const [category, setCategory] = useState("");
   const [imagePreview, setImagePreview] = useState("");
   const [image, setImage] = useState();
-  const [artist, setArtist]= useState("Anonymous");
+  const [artist, setArtist] = useState("Anonymous");
 
   const classes = useStyles();
   const fileInputRef = useRef();
@@ -103,9 +102,7 @@ export default function ProductForm() {
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
 
-  const buttonClassname = clsx({
-    [classes.buttonSuccess]: success,
-  });
+
 
   //image preview
   useEffect(() => {
