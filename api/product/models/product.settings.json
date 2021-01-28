@@ -31,15 +31,13 @@
     "description": {
       "type": "richtext"
     },
-    "artist": {
-      "via": "products",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "price": {
       "type": "decimal"
     },
     "category": {
+      "type": "string"
+    },
+    "artist": {
       "type": "string"
     }
   }

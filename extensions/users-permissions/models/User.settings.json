@@ -59,10 +59,6 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "products": {
-      "collection": "product",
-      "via": "artist"
-    },
     "blurb": {
       "type": "richtext"
     },
