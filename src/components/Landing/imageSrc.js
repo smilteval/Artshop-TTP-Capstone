@@ -2,6 +2,7 @@ import ImageOne from "../../assets/selling.jpg";
 import ImageTwo from "../../assets/Shopping.jpg";
 console.log(`url(${ImageOne})`);
 const images = [
+
   {
     title: "Sell Your Art!",
     description:
@@ -21,5 +22,6 @@ const images = [
     link: "/home",
   },
 ];
+
 
 export default images;
