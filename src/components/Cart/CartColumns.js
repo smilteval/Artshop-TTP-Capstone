@@ -9,9 +9,8 @@ const CartColumns = () => {
           <h5>quantity</h5>
           <h5>subtotal</h5>
           <span></span>
-          <hr/>
-          
       </div>
+      <hr/>
   </Wrapper>
 }
 
@@ -26,7 +25,7 @@ const Wrapper = styled.div`
       column-gap: 1rem;
       h5 {
         color: var(--clr-grey-5);
-        font-weight: 400;
+        // font-weight: 400;
       }
     }
     span {
