@@ -55,6 +55,16 @@ h2.Signup{
     box-shadow: 2px 2px 5px grey;
 }
 
+.avatar{
+    width: auto;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.image{
+    box-shadow: 2px 2px 5px grey;
+    margin-bottom: 1rem;
+}
+
 .signUp{
     margin-bottom: 1rem;
     margin-bottom: 1rem;

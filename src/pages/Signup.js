@@ -20,7 +20,7 @@ export default ({history}) => {
 
     useEffect(() => {
         if(user){
-            history.push('/');
+            history.push('/home');
         }
     }, [user]);
 
@@ -47,7 +47,7 @@ export default ({history}) => {
                     'Content-type': 'application/json'
                 },
                 body: JSON.stringify({
-                    username: email,
+                    username,
                     // changed so username is not email
                     email,
                     password
@@ -131,7 +131,7 @@ export default ({history}) => {
                 />
                 <br/>
 
-                <img src={imagePreview} />
+                <img className="image" src={imagePreview} />
                 {/* can visibly see the image */}
                 {/* <br/>
 
