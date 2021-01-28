@@ -9,7 +9,7 @@ const images = [
     imageUrl: ImageOne,
     time: 1500,
     button: "Start Selling",
-    link: "/home",
+    link: "/home ",
   },
   {
     title: "Buy Art!",

@@ -67,7 +67,7 @@ export default function ImageCard({ images, checked }) {
         <CardActions>
           <Link to={images.link}>
             <Button
-              style={{ margin: "5px", padding: "10px" }}
+              style={{ margin: "5px", padding: "10px", textAlign: "center" }}
               size="large"
               color="secondary"
               className={classes.buttons}
