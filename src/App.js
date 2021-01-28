@@ -16,6 +16,7 @@ import Checkout from './pages/Checkout';
 import {Redirect} from 'react-router-dom'
 import Header  from "./components/Landing/Header"
 import TopBar from "./components/Landing/TopBar"
+import './index.css'
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
       <Router>
         <Switch>
         <Route path = "/" exact component = {LandingPage}/>
-          <div>
+          <div className="page-container">
+            <div className="content-wrap">
           <Navbar />
           <Route path="/home" exact component={Home} />
           <Route path="/artists" exact component={Artists} />
@@ -36,9 +38,12 @@ function App() {
           <Route path ="/cart" exact component = {Cart}/>
           <Route path ="/checkout" exact component = {Checkout}/>
           </div>
+          <Footer />
+          </div>
         </Switch>
-        <Footer />
+
       </Router>
+
 
     </>
   );
