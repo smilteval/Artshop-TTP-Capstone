@@ -1,6 +1,6 @@
-import ImageOne from '../../assets/selling.jpg'
-import ImageTwo from '../../assets/Shopping.jpg'
-console.log(`url(${ImageOne})`)
+import ImageOne from "../../assets/selling.jpg";
+import ImageTwo from "../../assets/Shopping.jpg";
+console.log(`url(${ImageOne})`);
 const images = [
     {
 title: 'Sell Your Art!',
