@@ -12,6 +12,7 @@ import Signup from "./pages/Signup";
 import LandingPage from "./pages/LandingPage"
 import Cart from './pages/Cart';
 import Footer from "./components/Footer/Footer";
+import Checkout from './pages/Checkout';
 import {Redirect} from 'react-router-dom'
 import Header  from "./components/Landing/Header"
 import TopBar from "./components/Landing/TopBar"
@@ -33,6 +34,7 @@ function App() {
           <Route path="/publish" exact component={PublishArt} />
           <Route path ="/signup" exact component = {Signup}/>
           <Route path ="/cart" exact component = {Cart}/>
+          <Route path ="/checkout" exact component = {Checkout}/>
           </div>
         </Switch>
         <Footer />
