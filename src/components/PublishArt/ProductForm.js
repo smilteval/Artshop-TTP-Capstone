@@ -52,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
 
 const categories = [
   {
+    value: "Emoji Art",
+    label: "Emoji Art",
+  },
+  {
     value: "Paintings",
     label: "Paintings",
   },
