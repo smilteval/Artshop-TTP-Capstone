@@ -44,7 +44,7 @@ export default function SingleProduct() {
           </div>
           <div className="InfoRight">
             <Link className="artistName">
-              {product.artist && product.artist.username}
+              {product.artist}
             </Link>
             {/* TO DO: replace a link with artists id */}
           </div>
