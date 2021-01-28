@@ -2,6 +2,7 @@
   "name": "art-store-client",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://localhost:3000/landing",
   "dependencies": {
     "@fontsource/tenor-sans": "^4.1.0",
     "@material-ui/core": "^4.11.3",

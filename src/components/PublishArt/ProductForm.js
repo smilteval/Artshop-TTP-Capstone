@@ -72,6 +72,7 @@ export default function ProductForm() {
   const [category, setCategory] = useState("");
   const [imagePreview, setImagePreview] = useState("");
   const [image, setImage] = useState();
+  const [artist, setArtist]= useState("Anonymous");
 
   const classes = useStyles();
   const fileInputRef = useRef();
@@ -105,7 +106,7 @@ export default function ProductForm() {
     const formData = new FormData();
     formData.append(
       "data",
-      JSON.stringify({ title, description, price, category })
+      JSON.stringify({ title, description, price, category, artist })
     );
     formData.append("files.image", image);
 
@@ -125,7 +126,7 @@ export default function ProductForm() {
     }
 
     console.log("data", data);
-    console.log("response", response);
+    console.log("artist", artist);
   };
 
   useEffect(() => {
@@ -227,17 +228,27 @@ export default function ProductForm() {
             ))}
           </TextField>
           <br></br>
+          <TextField
+            label="Username"
+            variant="filled"
+            size="small"
+            helperText="Please enter your username (if you don't wish to provide one, you will be named anonymous)"
+            required
+            value={artist}
+            onChange={(event) => setArtist(event.target.value)}
+          />
+
+          <br></br>
           <Button
-          id="publish-btn"
-          type="submit"
-          variant="contained"
-          color="primary"
-          startIcon={<CloudUploadIcon />}
-        >
-          Publish
-        </Button>
+            id="publish-btn"
+            type="submit"
+            variant="contained"
+            color="primary"
+            startIcon={<CloudUploadIcon />}
+          >
+            Publish
+          </Button>
         </div>
-        
 
         <Snackbar
           open={openSuccess}
