@@ -15,6 +15,24 @@ export default function Home() {
         <div className="category">
           <ProductList category="Photography"/>
         </div>
+        <div className="category">
+          <ProductList category="Drawings"/>
+        </div>
+        <div className="category">
+          <ProductList category="Sculptures"/>
+        </div>
+        <div className="category">
+          <ProductList category="Crafts"/>
+        </div>
+        <div className="category">
+          <ProductList category="Graphic Design"/>
+        </div>
+        <div className="category">
+          <ProductList category="Calligraphy"/>
+        </div>
+        <div className="category">
+          <ProductList category="Pixel Art"/>
+        </div>
       </div>
     </div>
   );

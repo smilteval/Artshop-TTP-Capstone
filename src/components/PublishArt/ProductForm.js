@@ -60,9 +60,30 @@ const categories = [
     label: "Photography",
   },
   {
-    value: "Emoji Art",
-    label: "Emoji Art",
+    value: "Drawings",
+    label: "Drawings",
   },
+  {
+    value: "Sculptures",
+    label: "Sculptures",
+  },
+  {
+    value: "Crafts",
+    label: "Crafts",
+  },
+  {
+    value: "Graphic Design",
+    label: "Graphic Design",
+  },
+  {
+    value: "Calligraphy",
+    label: "Calligraphy",
+  },
+  {
+    value: "Pixel Art",
+    label: "Pixel Art",
+  }
+
 ];
 
 export default function ProductForm() {
