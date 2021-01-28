@@ -1,6 +1,6 @@
 import React from "react";
 import { addToCart } from "../Cart/AddToCart";
-//cart fcn
+import  { useEffect, useState } from "react";
 import { product } from "./ProductList";
 // cart fcn
 import {
@@ -10,9 +10,13 @@ import {
   CardMedia,
   CardContent,
 } from "@material-ui/core";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { Link } from "react-router-dom";
+import { useCartContext } from '../../context/cart_context'
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,9 +33,29 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ProductCard(props) {
+  
+  const [product, setProduct] = useState([]);
+  const {addToCart,removeItem} = useCartContext()
+  
+  
+    const [amount, setAmount] = useState(1)
+
+
   let { title, imageUrl, price, id } = props;
 
   const classes = useStyles();
+  useEffect(() => {
+    const getProduct = async () => {
+      const response = await fetch(
+        `https://ttp-art-store.herokuapp.com/products/${id}`
+      );
+      const data = await response.json();
+      setProduct(data);
+    };
+    getProduct();
+  }, []);
+
+
 
   return (
     <div className="product-card" style={{ margin: "10px" }}>
@@ -45,7 +69,7 @@ export default function ProductCard(props) {
         {/* TO DO: make the card title no more than 29 characters */}
         <div id="card-bottom">
           <CardContent id="card-price">${price.toFixed(2)}</CardContent>
-          <Button id="card-cart-btn">
+          <Button id="card-cart-btn" onClick={() => addToCart(id, amount, product)} > 
             <AddShoppingCartIcon />
           </Button>
         </div>

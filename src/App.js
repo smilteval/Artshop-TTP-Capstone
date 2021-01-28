@@ -17,6 +17,7 @@ import LandingPage from "./pages/LandingPage";
 import Cart from "./pages/Cart";
 import Footer from "./components/Footer/Footer";
 import Checkout from "./pages/Checkout";
+import ScrollToTop from "./components/ScrollToTop";
 import "./index.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <div className="page-container">
