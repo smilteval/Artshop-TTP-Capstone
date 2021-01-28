@@ -18,7 +18,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
         <div className='navbar'>
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
+            <FaIcons.FaBars onClick={showSidebar} className='menu-bars'/>
             {/* this is the hamburger menu */}
           </Link>
             <div className= "logo">
@@ -47,7 +47,7 @@ function Navbar() {
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
-                    <span>{item.title}</span>
+                    <span id="span">{item.title}</span>
                   </Link>
                 </li>
               );
