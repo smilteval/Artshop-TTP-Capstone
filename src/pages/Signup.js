@@ -1,6 +1,9 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import "./Signup.css";
 import { UserContext } from "../context/UserContext";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 export default ({ history }) => {
   const [email, setEmail] = useState("");
@@ -13,6 +16,7 @@ export default ({ history }) => {
   const [imagePreview, setImagePreview] = useState();
 
   const [error, setError] = useState("");
+  const fileInputRef = useRef();
 
   // Come back here and add to the imagePreview in the useEffect
 
@@ -41,48 +45,48 @@ export default ({ history }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-    //   const formData = new FormData();
-    //   formData.append(
-    //     "data",
-    //     JSON.stringify({
-    //       username,
-    //       // changed so username is not email
-    //       email,
-    //       password,
-    //       name,
-    //       blurb,
-    //     })
-    //   );
-    //   formData.append("files.image", avatar);
+      //   const formData = new FormData();
+      //   formData.append(
+      //     "data",
+      //     JSON.stringify({
+      //       username,
+      //       // changed so username is not email
+      //       email,
+      //       password,
+      //       name,
+      //       blurb,
+      //     })
+      //   );
+      //   formData.append("files.image", avatar);
 
-    //   const response = await fetch(
-    //     "https://ttp-art-store.herokuapp.com/auth/local/register",
-    //     {
-    //       method: "POST",
-    //       body: formData,
-    //     }
-    //   );
-    //   const data = await response.json();
+      //   const response = await fetch(
+      //     "https://ttp-art-store.herokuapp.com/auth/local/register",
+      //     {
+      //       method: "POST",
+      //       body: formData,
+      //     }
+      //   );
+      //   const data = await response.json();
 
-        //creates authenticated user.
-        const response = await fetch(
-          "https://ttp-art-store.herokuapp.com/auth/local/register",
-          {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-            },
-            body: JSON.stringify({
-              username,
-              email,
-              password,
-              name,
-              blurb,
-            }),
-          }
-        );
+      //creates authenticated user.
+      const response = await fetch(
+        "https://ttp-art-store.herokuapp.com/auth/local/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            email,
+            password,
+            name,
+            blurb,
+          }),
+        }
+      );
 
-        const data = await response.json();
+      const data = await response.json();
       console.log("data", data);
 
       //Display error if there is one
@@ -99,97 +103,116 @@ export default ({ history }) => {
   };
 
   return (
-    <div className="divSignup">
-      <h2 className="Signup">Signup</h2>
+    <div className="signup-page">
+      
 
-      {/* form for signup */}
-      <form onSubmit={handleSubmit}>
-        {/* username field */}
-        <input
-          className="username"
-          type="text"
-          placeholder="Username "
-          value={username}
-          onChange={(event) => {
-            setError("");
-            setUsername(event.target.value);
-          }}
-        />
-        <br />
+      <form onSubmit={handleSubmit} id="signup-form">
+        <div id="profile-pic-upload">
+          {imagePreview ? (
+            <img id="profile-pic-preview" src={imagePreview} />
+          ) : (
+            <button
+              id="upload-profile-pic-btn"
+              onClick={(event) => {
+                event.preventDefault();
+                fileInputRef.current.click();
+              }}
+            >
+              <i id="upload-img-text">Please upload your profile image</i>
+            </button>
+          )}
 
-        {/* Full name field */}
-        <input
-          className="artist"
-          type="text"
-          placeholder="Full Name"
-          value={name}
-          onChange={(event) => {
-            setError("");
-            setName(event.target.value);
-          }}
-        />
-        <br />
-        {/* TODO: NOT SURE IF HOOKED UP */}
+          <input
+            type="file"
+            style={{ display: "none" }}
+            ref={fileInputRef}
+            accept="image/*"
+            onChange={(event) => {
+              const file = event.target.files[0];
+              if (file && file.type.substr(0, 5) === "image") {
+                setAvatar(file);
+              } else {
+                setAvatar(null);
+              }
+            }}
+          />
+        </div>
+        <div id="signup-info-upload">
+        <h2 className="signup-title">Signup</h2>
+          <TextField
+            label="Username"
+            variant="filled"
+            size="small"
+            required
+            value={username}
+            onChange={(event) => {
+              setUsername(event.target.value);
+            }}
+          />
+          <br />
 
-        {/* email field */}
-        <input
-          className="email"
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(event) => {
-            setError("");
-            setEmail(event.target.value);
-          }}
-        />
-        <br />
+          <TextField
+            label="Full Name"
+            variant="filled"
+            size="small"
+            required
+            value={name}
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+          <br />
 
-        {/* password field */}
-        <input
-          className="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(event) => {
-            setError("");
-            setPassword(event.target.value);
-          }}
-        />
-        <br />
+          <TextField
+            label="Email"
+            variant="filled"
+            type="email"
+            size="small"
+            required
+            value={email}
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+          />
+          <br />
 
-        <input
-          className="blurb"
-          type="text"
-          placeholder="Tell us about yourself"
-          value={blurb}
-          onChange={(event) => {
-            setError("");
-            setBlurb(event.target.value);
-          }}
-        />
-        <br />
+          <TextField
+            label="Password"
+            variant="filled"
+            type="password"
+            size="small"
+            required
+            value={password}
+            onChange={(event) => {
+              setPassword(event.target.value);
+            }}
+          />
+          <br />
 
-        {/* Avatar field */}
-        <input
-          className="avatar"
-          type="file"
-          placeholder="Add an image"
-          onChange={
-            (event) => {
-              // setError('');
-              setAvatar(event.target.files[0]);
-            }
-            // changes text from add an image to what the image is
-          }
-        />
-        <br />
-
-        <img className="image" src={imagePreview} />
-        {/* can visibly see the image */}
-        {/* <br/>
-
-                {/* submit button */}
-        <button className="button">Signup</button>
+          <TextField
+            label="Bio"
+            variant="filled"
+            size="small"
+            multiline
+            rowsMax={5}
+            rows={5}
+            placeholder="Tell us about yourself"
+            value={blurb}
+            onChange={(event) => {
+              setBlurb(event.target.value);
+            }}
+          />
+          <br />
+          <Button
+            id="signup-btn"
+            type="submit"
+            variant="contained"
+            color="primary"
+            startIcon={<ExitToAppIcon />}
+          >
+            Signup
+          </Button>
+        </div>
       </form>
 
       {error && <p>{error}</p>}

@@ -7,9 +7,9 @@ import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
-import clsx from "clsx";
+
 import { makeStyles } from "@material-ui/core/styles";
-import CircularProgress from "@material-ui/core/CircularProgress";
+
 import { green } from "@material-ui/core/colors";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
@@ -94,10 +94,9 @@ export default function ProductForm() {
   const [image, setImage] = useState();
   const [artist, setArtist] = useState("Anonymous");
 
-  const classes = useStyles();
+
   const fileInputRef = useRef();
-  const [loading, setLoading] = React.useState(false);
-  const [success, setSuccess] = React.useState(false);
+
   const timer = React.useRef();
   const [openSuccess, setOpenSuccess] = React.useState(false);
   const [openError, setOpenError] = React.useState(false);
