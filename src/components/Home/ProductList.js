@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
-import Carousel from 'react-elastic-carousel';
+import Carousel from "react-elastic-carousel";
 
 const breakPoints = [
   { width: 1, itemsToShow: 2 },

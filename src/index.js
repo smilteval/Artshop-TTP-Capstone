@@ -7,7 +7,6 @@ import UserContextProvider from './context/UserContext';
 import { CartProvider } from './context/cart_context'
 import { ProductsProvider } from './context/products_context'
 
-
 ReactDOM.render(
   <React.StrictMode>
     <UserContextProvider>
