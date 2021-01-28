@@ -1,6 +1,6 @@
 import React from "react";
-import AddCircleIcon from '@material-ui/icons/AddCircle';
-import {Link} from "react-router-dom"
+import AddCircleIcon from "@material-ui/icons/AddCircle";
+import { Link } from "react-router-dom";
 
 import {
   makeStyles,
@@ -34,23 +34,28 @@ const useStyles = makeStyles((theme) => ({
 // }
 
 export default function ArtistCard(props) {
-  const { blurb,name,imageUrl,id} = props;
+  const { blurb, name, imageUrl, id } = props;
 
   const classes = useStyles();
 
   const formatImageUrl = (url) => `https://ttp-art-store.herokuapp.com${url}`;
-  
-// console.log(username)
-// console.log(email)
-// console.log(id)
+
+  // console.log(username)
+  // console.log(email)
+  // console.log(id)
 
   return (
     <div className="Artist" style={{ margin: "10px" }}>
       <Card className={classes.root}>
         <CardHeader
-          avatar={<Avatar  alt="Artist" src= {imageUrl} className={classes.large}></Avatar> }
+          avatar={
+            <Avatar
+              alt="Artist"
+              src={imageUrl}
+              className={classes.large}
+            ></Avatar>
+          }
           title={name}
-          
         />
         {/* <CardMedia className={classes.media} image={formatImageUrl(imageUrl)} />  */}
         <CardContent>
@@ -60,13 +65,11 @@ export default function ArtistCard(props) {
         </CardContent>
         <CardActions>
           <IconButton>
-          <Link to={`/Users/${id}`}>
-            <AddCircleIcon  />
-            Special Request
+            <Link to={`/Users/${id}`}>
+              <AddCircleIcon />
+              Special Request
             </Link>
-          </IconButton >
-
-
+          </IconButton>
         </CardActions>
       </Card>
     </div>

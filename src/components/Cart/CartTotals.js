@@ -5,6 +5,7 @@ import {UserContext} from '../../context/UserContext';
 // import { formatPrice } from '../utils/helpers'
 import { Link } from 'react-router-dom'
 
+
 const CartTotals = () => {
     const {total_amount, shipping_fee} = useCartContext()
   return <Wrapper>
@@ -13,7 +14,7 @@ const CartTotals = () => {
               <h5>subtotal : <span>{total_amount}</span></h5>
               <p>shipping fee : <span>{shipping_fee}</span></p>
               <hr/>
-              <h4>order total : <span>{total_amount + shipping_fee}</span></h4>
+              <h4>order total : <span>{(total_amount + shipping_fee).toFixed(2)}</span></h4>
           </article>
           <Link to='/checkout' className='btn'>
               proceed to checkout
