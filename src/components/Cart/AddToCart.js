@@ -5,9 +5,10 @@ import { FaCheck } from 'react-icons/fa'
 import { useCartContext } from '../../context/cart_context'
 import AmountButtons from './AmountButtons'
 
-const AddToCart = ({ product}) => {
-    const {addToCart} = useCartContext()
-    const { id, name } = product
+const  AddToCart = ({ product}) => {
+    const {addToCart,removeItem} = useCartContext()
+
+    const { id } = product
     
 
     // const [mainColor, setMainColor] = useState(colors[0])
@@ -23,12 +24,12 @@ const AddToCart = ({ product}) => {
     const decrease = () => {
         setAmount((oldAmount) => {
             let tempAmount = oldAmount - 1
-            if(tempAmount < 1) {
-              tempAmount = 0
-            }
+    
             return tempAmount
+            
         })
     }
+  
     
   return (
       <Wrapper>
