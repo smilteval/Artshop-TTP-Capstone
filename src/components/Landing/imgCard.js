@@ -12,25 +12,29 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
   root: {
     maxWidth: 645,
-    background: 'rgba(0,0,0,0.5)',
+    background: 'rgb(9 14 19 / 88%)',
     margin: '20px',
   },
   media: {
-    height: 440,
+    height: 400,
   },
   title: {
-    fontFamily: 'Tenor Sans',
+    fontFamily: 'Lato',
     fontWeight: 'bold',
     fontSize: '2rem',
     color: '#fff',
   },
   desc: {
-    fontFamily: 'Tenor Sans',
+    fontFamily: `"Lato"`,
+    fontWeight: 'bold',
     fontSize: '1.1rem',
     color: '#ddd',
   },
   buttons: {
-    backgroundColor: '#000000',
+    fontFamily: 'Lato',
+    fontWeight: 'bold',
+    color: '#F0EBD8',
+    backgroundColor: '#A37774',
   }
 });
 
