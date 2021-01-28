@@ -83,6 +83,10 @@ const categories = [
     value: "Pixel Art",
     label: "Pixel Art",
   },
+  {
+    value: "Gifs",
+    label: "Gifs",
+  },
 ];
 
 export default function ProductForm() {
@@ -246,7 +250,7 @@ export default function ProductForm() {
           </TextField>
           <br></br>
           <TextField
-            label="Username"
+            label="Full Name"
             variant="filled"
             size="small"
             helperText="Please enter your username (if you don't wish to provide one, you will be named anonymous)"

@@ -36,7 +36,7 @@ export default function Artists(props) {
       <div className="Artist-list">
         <div className="artists">
           <div className="Artist-Page">
-            <GridList cellHeight={500} className={classes.gridList} cols={3}>
+            <GridList cellHeight={500} className={classes.gridList} cols={5}>
               {user.map((users) => {
                 //console.log(users.username)
                 return (
