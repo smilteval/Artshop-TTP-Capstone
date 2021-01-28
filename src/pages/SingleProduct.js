@@ -42,12 +42,7 @@ export default function SingleProduct() {
             {" "}
             <strong>Created by </strong>
           </div>
-          <div className="InfoRight">
-            <Link className="artistName">
-              {product.artist}
-            </Link>
-            {/* TO DO: replace a link with artists id */}
-          </div>
+          <div className="InfoRight">{product.artist}</div>
           <div className="InfoLeft">
             <strong>Description </strong>
           </div>
