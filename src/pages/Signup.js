@@ -7,6 +7,7 @@ export default ({history}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
+    const [artist, setArtist] = useState('');
 
     const [file, setFile] = useState(null);
     const [imagePreview, setImagePreview] = useState();
@@ -84,12 +85,24 @@ export default ({history}) => {
 
                  {/* username field */}
                  <input className="username"
-                    type = 'username'
-                    placeholder="Username or Full Name"
+                    type = 'text'
+                    placeholder="Username "
                     value = {username}
                     onChange = {(event) => {
                         setError('');
                         setUsername(event.target.value)
+                    }}
+                />
+                <br/>
+
+                {/* Full name field */}
+                <input className="artist"
+                    type = 'text'
+                    placeholder="Full Name"
+                    value = {artist}
+                    onChange = {(event) => {
+                        setError('');
+                        setArtist(event.target.value)
                     }}
                 />
                 <br/>
