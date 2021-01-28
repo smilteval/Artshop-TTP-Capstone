@@ -18,8 +18,8 @@ import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 350,
-    maxHeight: 500,
+    width: 350,
+    height: 500,
   },
   media: {
     height: 0,
