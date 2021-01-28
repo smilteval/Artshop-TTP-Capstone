@@ -1,54 +1,64 @@
-.divSignup{
-    text-align: center;
-    padding: 30px;
-    border-radius: 59px;
-    width: 50%;
-    height: 50%;
-
-    display: block;
-    margin: auto;
+.signup-page{
+height:100vh;
+background-color: darkslategrey;
+background: url("https://images.unsplash.com/photo-1561212024-cb9ad0c33195?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+background-size: cover;
 }
 
-h2.Signup{
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+.signup-title{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.email, .password, .artist, .username{
-    margin-bottom: 8px;
-    border: 2px solid rgb(92, 92, 92);
-    border-radius: 4px;
-    padding: 6px 10px;
-    /* vertical size */
-    width: 90%;
+#signup-form {
+  padding: 10px 50px;
+  width: 60%;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 20px black;
 }
 
-.avatar{
-    /* may need to change name to file? */
-    margin-top:10px;
-    /* will leave it uncentered, difficult ot implement */
+#profile-pic-upload {
+  padding: 30px;
+  text-align: center;
+  margin-top: 90px;
 }
 
-.button{
-    /* margin-bottom: 1rem; */
-    flex-direction: row;
-    width: 155px;
-    box-shadow: 2px 2px 5px grey;
-
+#signup-info-upload {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
 }
 
-.avatar{
-    width: auto;
-    box-shadow: 2px 2px 5px grey;
-    margin-bottom: 1rem;
+#upload-profile-pic-btn {
+  width: 200px;
+  height: 200px;
+  border-width: 0;
+  font-size: 20px;
+  border-radius: 50%;
 }
 
-.image{
-    box-shadow: 2px 2px 5px grey;
-    margin-bottom: 1rem;
+#profile-pic-preview{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
-.signUp{
-    margin-bottom: 1rem;
+#upload-img-text {
+  color: darkgray;
+}
+
+#signup-btn {
+  width: 50%;
+  height: 50px;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 50px;
 }
