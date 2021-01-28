@@ -34,13 +34,18 @@ const useStyles = makeStyles((theme) => ({
   },
   colorText: {
     color: '#04364C',
+    
   },
   container: {
+    height: '300px',
+    width: '800px',
+    background: 'rgb(9 14 19 / 88%)',
     textAlign: 'center',
+    padding: '5px 20px 5px 10px'
   },
   title: {
-    color: '#fff',
-    fontSize: '4.5rem',
+    color: '#fffffff5',
+    fontSize: '10rem',
   },
   goDown: {
     color: '#5AFF3D',
@@ -70,7 +75,7 @@ export default function Header() {
       >
         <div className={classes.container}>
           <h1 className={classes.title}>
-          <span className={classes.colorText} >Welcome to  </span> <br />
+          {/* <span className={classes.colorText} >Welcome to  </span> <br /> */}
             <span>ARTSHOP</span>
           </h1>
           <Scroll to="image-buttons" smooth={true}>

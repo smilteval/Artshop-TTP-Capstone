@@ -10,8 +10,8 @@ import StartSelling from '../components/Landing/StartSelling'
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    background:'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    backgroundImage: `url(${background})`, 
+    
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`, 
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
