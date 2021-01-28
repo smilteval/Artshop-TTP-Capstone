@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import PublishArt from "./pages/PublishArt";
 import Signup from './pages/Signup';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/publish" exact component={PublishArt} />
           <Route path ="/signup" exact component = {Signup}/>
           <Route path ="/cart" exact component = {Cart}/>
+          <Route path ="/checkout" exact component = {Checkout}/>
 
 
         </Switch>
