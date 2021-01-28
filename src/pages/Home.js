@@ -10,10 +10,13 @@ export default function Home() {
           <ProductList category="Paintings"/>
         </div>
         <div className="category">
+          <ProductList category="Photography"/>
+        </div>
+        <div className="category">
           <ProductList category="Emoji Art"/>
         </div>
         <div className="category">
-          <ProductList category="Photography"/>
+          <ProductList category="Gifs"/>
         </div>
         <div className="category">
           <ProductList category="Drawings"/>

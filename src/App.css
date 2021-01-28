@@ -25,11 +25,11 @@ body {
 .Artist-list {
   display: flex;
   padding: 16px;
-  text-align: center;
-  box-shadow: 5px 5px 10px rgb(184, 183, 183);
+  text-align: left;
+  background-color:  #04364C;
 }
 
-/* Form Css Syling  */
+/* Form Css Styling  */
 
 .form-style-1 {
 	margin:10px auto;
@@ -178,7 +178,7 @@ button:hover, a:hover {
 
 .category {
   padding: 50px 0;
-  color: white
+  color: white;
 }
 
 .product-list {
@@ -194,7 +194,7 @@ button:hover, a:hover {
   margin-right: 20px;
   margin-bottom: 10px;
   font-size: 28px;
-  text-align: right;
+  text-align: center;
 }
 
 .product-list-items {
