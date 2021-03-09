@@ -1,0 +1,103 @@
+.product-image{
+    float: left;
+    min-height: 120px;
+    min-width: 120px;
+    /* max-width:300px; */
+        
+
+    /* max-height:fit-content; */
+    /* max-width: fit-content; */
+    /* object-fit: scale-down;
+    height:100%;
+    width:100%; */
+
+    /* display: flex;
+    justify-content: start;
+    align-items: center; */
+
+    /* width:100px; */
+    /* height:100px; */
+    /* background-size: 100px 100px;  */
+
+    /* overflow-y:hidden; */
+    /* overflow-x:hidden; */
+    /* width:fit-content; */
+    /* height: auto; */
+    margin-right: 3rem;
+    /* padding between text and image */
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+}
+
+h3{
+    margin-bottom: 10px; 
+    /* sample */
+}
+
+img{
+    max-width: 360px;
+    /* Making it 50% shrinks the logo */
+    max-height: 100%;
+    /* width:auto; */
+    /* height:auto; */
+    object-fit: cover;
+}
+
+.product-info{
+    float:center;
+    /* add column? */
+    line-height: 250%;
+    /* text-indent: 50px; I'm looking for the inverted indent*/
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+}
+
+.Info{
+    column-count: 2;
+    display: grid;
+    column-gap: 0px;
+    grid-template-columns: 8rem auto;
+    /* hard coded values do not make the text stretch */
+    grid-row-gap: 20px;
+    grid-column-gap: 0px;
+    margin-right: 2rem;
+    /* pushes text over so it isn't too close to edge of screen */
+}
+
+.InfoLeft{
+    display:inline-block;
+}
+
+.InfoRight{
+    display:inline-block;
+}
+
+.artistName{
+    font-size: 13pt;
+    color: blue;
+    box-shadow: 0px 2px blue; 
+}
+
+.price{ 
+    display:inline-table;
+    color: white;
+    height: 30px;
+    width: 70px;
+    margin-bottom: 5px;
+    /* border: 1px solid rgb(20, 128, 252); */
+    background-color: rgb(20, 128, 252);
+    box-shadow: 0 0 1px 3px rgba(243, 243, 243, 0.5);
+    text-align: center;
+    /* TODO: Make it look like a button not a box */
+}
+
+/* .add2Cart {
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    border: 1px solid red;
+    background-color: red;
+    text-align: center;
+} */
