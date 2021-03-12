@@ -70,7 +70,8 @@ Additional:&nbsp; &nbsp; &nbsp;
 <!-------------------------------------------------------------------------------------------------------------------------->
 
 ## <a name="team"></a> Team Members
- * [Smilte Valasinaite](https://www.linkedin.com/in/smiltevalasinaite/)
+ 
  * [Joseph LaMantia](https://www.linkedin.com/in/lamantiajoseph/)
  * [Sabahet Alovic](https://www.linkedin.com/in/sabahet/)
+ * [Smilte Valasinaite](https://www.linkedin.com/in/smiltevalasinaite/)
  * [Vincenzo Mezzio](https://www.linkedin.com/in/vincenzomezzio/)
