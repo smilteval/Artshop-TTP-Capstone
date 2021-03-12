@@ -2,10 +2,10 @@
 
 <!-------------------------------------------------------------------------------------------------------------------------->
 
-# Artshop-TTP-Capstone
-
-A Full-stack project developed during the NYC Tech Talent Pipeline Program. <br>
+A Full-stack capstone project developed during the NYC Tech Talent Pipeline Program. <br>
 E-commerce store where users can buy and sell art in different categories.
+
+<br>
 
 <!-------------------------------------------------------------------------------------------------------------------------->
 
