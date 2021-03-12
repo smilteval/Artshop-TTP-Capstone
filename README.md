@@ -45,7 +45,7 @@ Viewing the application:
 
 ## <a name="live"></a> Live Project Link
 
-Application is deployed on :point_right: https://ttp-art-shop.netlify.app/ :point_left: 
+Application is deployed on :art: https://ttp-art-shop.netlify.app/ :art:
 
 <br>
 
